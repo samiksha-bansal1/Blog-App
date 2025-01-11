@@ -46,7 +46,8 @@ BlogApp is a simple and intuitive platform for creating, editing, and managing b
 ## Screenshot 📸
 
 ### Homepage
-![image](https://github.com/user-attachments/assets/605acc47-8cf0-439e-a296-d9b803375ecc)
+![image](https://github.com/user-attachments/assets/70c300f4-3b72-49c2-8d9e-6d70fed6f123)
+
 
 
 
