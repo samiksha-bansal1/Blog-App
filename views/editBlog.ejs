@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('./partials/head') %>
+    <title>Edit Blog Page</title>
+    <style>
+      .container {
+        max-width: 700px;
+      }
+      .img-thumbnail {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+      }
+      .form-control {
+        font-size: 1rem;
+      }
+      .btn {
+        font-size: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <%- include('./partials/nav') %>
+
+    <div class="container mt-5">
+      <div class="row justify-content-center">
+        <div class="col-12">
+          <h2 class="text-center mb-4">Edit Blog</h2>
+          <form
+            action="/blog/edit/<%= blog._id %>"
+            method="post"
+            enctype="multipart/form-data"
+            class="p-4 border rounded bg-light shadow-sm"
+          >
+            <div class="mb-3">
+              <label for="coverImage" class="form-label">Cover Image</label>
+              <div class="mb-2">
+                <img
+                  src="<%= blog.coverImageURL %>"
+                  alt="Cover Image"
+                  class="img-thumbnail"
+                />
+              </div>
+              <input
+                type="file"
+                class="form-control"
+                id="coverImage"
+                name="coverImage"
+              />
+              <input
+                type="hidden"
+                name="coverImageURL"
+                value="<%= blog.coverImageURL %>"
+              />
+            </div>
+
+            <div class="mb-3">
+              <label for="title" class="form-label">Title</label>
+              <input
+                type="text"
+                class="form-control"
+                id="title"
+                name="title"
+                value="<%= blog.title %>"
+                required
+              />
+            </div>
+
+            <div class="mb-3">
+              <label for="body" class="form-label">Body</label>
+              <textarea
+                name="body"
+                class="form-control"
+                id="body"
+                rows="7"
+                placeholder="Write your blog content here"
+                required
+              >
+<%= blog.body %></textarea
+              >
+            </div>
+
+            <div class="mb-3 text-center">
+              <button type="submit" class="btn btn-primary w-100">
+                Submit
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <%- include('./partials/footer') %> <%- include('./partials/script') %>
+  </body>
+</html>
