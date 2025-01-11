@@ -18,7 +18,6 @@ BlogApp is a simple and intuitive platform for creating, editing, and managing b
 1. Clone the repository:
    ```bash
    git clone https://github.com/your-username/Blog-App.git
-   cd BlogApp
    ```
 
 2. Install dependencies:
